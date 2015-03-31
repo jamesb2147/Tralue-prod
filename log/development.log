@@ -1,0 +1,2670 @@
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (16.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCreditcards (20150322213616)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "creditcards" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "issuer" varchar(255), "annual_fee" integer, "fee_waived_first_year" boolean, "points_program" varchar(255), "spend_bonus" integer, "spend_requirement" integer, "time_to_reach_spend_in_months" integer, "first_purchase_bonus" integer, "second_year_spend_bonus" integer, "second_year_spend_requirement" integer, "second_year_time_to_reach_spend_in_months" integer, "points_per_dollar_spent_general_spend" decimal, "foreign_transaction_fee" decimal, "chip" varchar(255), "notes" text, "business" boolean, "personal" boolean, "image_index" integer, "url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150322213616"]]
+  [1m[36m (11.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTrips (20150322213631)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "trips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "costinusd" decimal, "aacostpts" integer, "aacostusd" decimal, "bacostpts" integer, "bacostusd" decimal, "uacostpts" integer, "uacostusd" decimal, "dlcostpts" integer, "dlcostusd" decimal, "ascostpts" integer, "ascostusd" decimal, "nkcostpts" integer, "nkcostusd" decimal, "sqcostpts" integer, "sqcostusd" decimal, "lacostpts" integer, "lacostusd" decimal, "accostpts" integer, "accostusd" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150322213631"]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateRates (20150322213645)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "rates" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "transferringprogram" varchar(255), "transfereeprogram" varchar(255), "transferratio" decimal, "transfernotes" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150322213645"]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateResults (20150322213656)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "results" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150322213656"]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 198.178.132.246 at 2015-03-23 13:24:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 859ms (Views: 849.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.246 at 2015-03-23 13:24:51 +0000
+
+
+Started GET "/creditcards" for 198.178.132.246 at 2015-03-23 13:24:57 +0000
+Processing by CreditcardsController#index as HTML
+  [1m[35mCreditcard Load (0.3ms)[0m  SELECT "creditcards".* FROM "creditcards"
+  Rendered creditcards/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rates" for 198.178.132.246 at 2015-03-23 13:25:00 +0000
+Processing by RatesController#index as HTML
+  [1m[36mRate Load (0.3ms)[0m  [1mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips" for 198.178.132.246 at 2015-03-23 13:25:02 +0000
+Processing by TripsController#index as HTML
+  [1m[35mTrip Load (0.5ms)[0m  SELECT "trips".* FROM "trips"
+  Rendered trips/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 18ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rates/new" for 198.178.132.246 at 2015-03-23 13:25:24 +0000
+Processing by RatesController#new as HTML
+Filter chain halted as #<Proc:0x000000041474f0@/usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rates/new" for 198.178.132.246 at 2015-03-23 13:25:29 +0000
+Processing by RatesController#new as HTML
+  Rendered rates/_form.html.erb (21.2ms)
+  Rendered rates/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:25:52 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"american", "transfereeprogram"=>"american", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+Filter chain halted as #<Proc:0x000000041474f0@/usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:25:52 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"american", "transfereeprogram"=>"american", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.9ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:25:52 UTC +00:00], ["transfereeprogram", "american"], ["transfernotes", ""], ["transferratio", #<BigDecimal:39a5a58,'0.1E1',9(18)>], ["transferringprogram", "american"], ["updated_at", Mon, 23 Mar 2015 13:25:52 UTC +00:00]]
+  [1m[36m (15.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/1
+Completed 302 Found in 40ms (ActiveRecord: 26.2ms)
+
+
+Started GET "/rates/1" for 198.178.132.246 at 2015-03-23 13:25:52 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRate Load (0.5ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered rates/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:25:59 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"delta", "transfereeprogram"=>"delta", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:25:59 UTC +00:00], ["transfereeprogram", "delta"], ["transfernotes", ""], ["transferratio", #<BigDecimal:37bf158,'0.1E1',9(18)>], ["transferringprogram", "delta"], ["updated_at", Mon, 23 Mar 2015 13:25:59 UTC +00:00]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/2
+Completed 302 Found in 16ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/rates/2" for 198.178.132.246 at 2015-03-23 13:25:59 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mRate Load (0.2ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered rates/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:26:05 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"united", "transfereeprogram"=>"united", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:26:05 UTC +00:00], ["transfereeprogram", "united"], ["transfernotes", ""], ["transferratio", #<BigDecimal:2506458,'0.1E1',9(18)>], ["transferringprogram", "united"], ["updated_at", Mon, 23 Mar 2015 13:26:05 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/3
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/rates/3" for 198.178.132.246 at 2015-03-23 13:26:05 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRate Load (0.1ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered rates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:26:35 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"cathay_pacific", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:26:35 UTC +00:00], ["transfereeprogram", "cathay_pacific"], ["transfernotes", ""], ["transferratio", #<BigDecimal:1a98408,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:26:35 UTC +00:00]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/4
+Completed 302 Found in 17ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/rates/4" for 198.178.132.246 at 2015-03-23 13:26:35 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mRate Load (0.3ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered rates/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:26:43 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"eva", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:26:43 UTC +00:00], ["transfereeprogram", "eva"], ["transfernotes", ""], ["transferratio", #<BigDecimal:4167c28,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:26:43 UTC +00:00]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/5
+Completed 302 Found in 8ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/rates/5" for 198.178.132.246 at 2015-03-23 13:26:43 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mRate Load (0.2ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered rates/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:26:51 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"etihad", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:26:51 UTC +00:00], ["transfereeprogram", "etihad"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3fe6958,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:26:51 UTC +00:00]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/6
+Completed 302 Found in 8ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/rates/6" for 198.178.132.246 at 2015-03-23 13:26:51 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mRate Load (0.3ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered rates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:26:56 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"flying_blue", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:26:56 UTC +00:00], ["transfereeprogram", "flying_blue"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3e1a250,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:26:56 UTC +00:00]]
+  [1m[36m (4.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/7
+Completed 302 Found in 14ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/rates/7" for 198.178.132.246 at 2015-03-23 13:26:56 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mRate Load (0.3ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "7"]]
+  Rendered rates/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:27:07 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"garuda_indonesia", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:27:07 UTC +00:00], ["transfereeprogram", "garuda_indonesia"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3c54c68,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:27:07 UTC +00:00]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/8
+Completed 302 Found in 15ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/rates/8" for 198.178.132.246 at 2015-03-23 13:27:07 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mRate Load (0.2ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "8"]]
+  Rendered rates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:27:12 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"malaysia", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:27:12 UTC +00:00], ["transfereeprogram", "malaysia"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3ac3390,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:27:12 UTC +00:00]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/9
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/rates/9" for 198.178.132.246 at 2015-03-23 13:27:12 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mRate Load (0.2ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "9"]]
+  Rendered rates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:27:22 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"qantas", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:27:22 UTC +00:00], ["transfereeprogram", "qantas"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3935cd0,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:27:22 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/10
+Completed 302 Found in 7ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/rates/10" for 198.178.132.246 at 2015-03-23 13:27:22 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mRate Load (0.2ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "10"]]
+  Rendered rates/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:27:26 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"qatar", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:27:26 UTC +00:00], ["transfereeprogram", "qatar"], ["transfernotes", ""], ["transferratio", #<BigDecimal:37bc9d0,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:27:26 UTC +00:00]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/11
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/rates/11" for 198.178.132.246 at 2015-03-23 13:27:26 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mRate Load (0.2ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "11"]]
+  Rendered rates/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:27:31 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"singapore", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:27:31 UTC +00:00], ["transfereeprogram", "singapore"], ["transfernotes", ""], ["transferratio", #<BigDecimal:24f5f18,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:27:31 UTC +00:00]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/12
+Completed 302 Found in 9ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/rates/12" for 198.178.132.246 at 2015-03-23 13:27:31 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mRate Load (0.2ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "12"]]
+  Rendered rates/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:27:40 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"thai", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:27:40 UTC +00:00], ["transfereeprogram", "thai"], ["transfernotes", ""], ["transferratio", #<BigDecimal:1a92af8,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:27:40 UTC +00:00]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/13
+Completed 302 Found in 12ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/rates/13" for 198.178.132.246 at 2015-03-23 13:27:40 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mRate Load (0.3ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "13"]]
+  Rendered rates/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:27:46 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"ty", "transfereeprogram"=>"virgin_atlantic", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:27:46 UTC +00:00], ["transfereeprogram", "virgin_atlantic"], ["transfernotes", ""], ["transferratio", #<BigDecimal:4154880,'0.1E1',9(18)>], ["transferringprogram", "ty"], ["updated_at", Mon, 23 Mar 2015 13:27:46 UTC +00:00]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/14
+Completed 302 Found in 14ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/rates/14" for 198.178.132.246 at 2015-03-23 13:27:46 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mRate Load (0.2ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "14"]]
+  Rendered rates/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:28:06 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"delta", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Mon, 23 Mar 2015 13:28:06 UTC +00:00], ["transfereeprogram", "delta"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3fb8cb0,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:28:06 UTC +00:00]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/15
+Completed 302 Found in 20ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/rates/15" for 198.178.132.246 at 2015-03-23 13:28:06 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mRate Load (0.3ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "15"]]
+  Rendered rates/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rates" for 198.178.132.246 at 2015-03-23 13:28:24 +0000
+Processing by RatesController#index as HTML
+  [1m[36mRate Load (0.7ms)[0m  [1mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:28:29 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"singapore", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:28:29 UTC +00:00], ["transfereeprogram", "singapore"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3c1f0b8,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:28:29 UTC +00:00]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/16
+Completed 302 Found in 9ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/rates/16" for 198.178.132.246 at 2015-03-23 13:28:29 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "16"]]
+  Rendered rates/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:28:38 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"ba", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:28:38 UTC +00:00], ["transfereeprogram", "ba"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3a9a170,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:28:38 UTC +00:00]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/17
+Completed 302 Found in 8ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/rates/17" for 198.178.132.246 at 2015-03-23 13:28:38 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "17"]]
+  Rendered rates/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:28:44 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"aeroplan", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:28:44 UTC +00:00], ["transfereeprogram", "aeroplan"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3903cf8,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:28:44 UTC +00:00]]
+  [1m[35m (7.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/18
+Completed 302 Found in 15ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/rates/18" for 198.178.132.246 at 2015-03-23 13:28:44 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mRate Load (0.3ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  Rendered rates/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:28:50 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"alitalia", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:28:50 UTC +00:00], ["transfereeprogram", "alitalia"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3790088,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:28:50 UTC +00:00]]
+  [1m[35m (8.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/19
+Completed 302 Found in 15ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/rates/19" for 198.178.132.246 at 2015-03-23 13:28:50 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "19"]]
+  Rendered rates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:29:01 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"cathay_pacific", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:29:01 UTC +00:00], ["transfereeprogram", "cathay_pacific"], ["transfernotes", ""], ["transferratio", #<BigDecimal:2468dc0,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:29:01 UTC +00:00]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/20
+Completed 302 Found in 10ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/rates/20" for 198.178.132.246 at 2015-03-23 13:29:01 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mRate Load (0.3ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "20"]]
+  Rendered rates/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:29:05 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"etihad", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:29:05 UTC +00:00], ["transfereeprogram", "etihad"], ["transfernotes", ""], ["transferratio", #<BigDecimal:19ad660,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:29:05 UTC +00:00]]
+  [1m[35m (7.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/21
+Completed 302 Found in 26ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/rates/21" for 198.178.132.246 at 2015-03-23 13:29:05 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mRate Load (0.4ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "21"]]
+  Rendered rates/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:29:21 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"spg", "transferratio"=>"0.333", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:29:21 UTC +00:00], ["transfereeprogram", "spg"], ["transfernotes", ""], ["transferratio", #<BigDecimal:40fae98,'0.333E0',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:29:21 UTC +00:00]]
+  [1m[35m (6.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/22
+Completed 302 Found in 12ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/rates/22" for 198.178.132.246 at 2015-03-23 13:29:21 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mRate Load (0.4ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "22"]]
+  Rendered rates/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:29:30 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"ana", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:29:30 UTC +00:00], ["transfereeprogram", "ana"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3f5b830,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:29:30 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/23
+Completed 302 Found in 11ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/rates/23" for 198.178.132.246 at 2015-03-23 13:29:30 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "23"]]
+  Rendered rates/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:29:40 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"flying_blue", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:29:40 UTC +00:00], ["transfereeprogram", "flying_blue"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3da1698,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:29:40 UTC +00:00]]
+  [1m[35m (6.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/24
+Completed 302 Found in 19ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/rates/24" for 198.178.132.246 at 2015-03-23 13:29:40 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mRate Load (0.3ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "24"]]
+  Rendered rates/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:30:19 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"aeromexico", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:30:19 UTC +00:00], ["transfereeprogram", "aeromexico"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3bcd538,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:30:19 UTC +00:00]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/25
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/rates/25" for 198.178.132.246 at 2015-03-23 13:30:19 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "25"]]
+  Rendered rates/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:30:26 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"el_al", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:30:26 UTC +00:00], ["transfereeprogram", "el_al"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3a43208,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:30:26 UTC +00:00]]
+  [1m[35m (7.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/26
+Completed 302 Found in 14ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/rates/26" for 198.178.132.246 at 2015-03-23 13:30:26 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "26"]]
+  Rendered rates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:30:33 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"hawaiian", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:30:33 UTC +00:00], ["transfereeprogram", "hawaiian"], ["transfernotes", ""], ["transferratio", #<BigDecimal:3897260,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:30:33 UTC +00:00]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/27
+Completed 302 Found in 8ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/rates/27" for 198.178.132.246 at 2015-03-23 13:30:33 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "27"]]
+  Rendered rates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:30:38 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"iberia", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:30:38 UTC +00:00], ["transfereeprogram", "iberia"], ["transfernotes", ""], ["transferratio", #<BigDecimal:27672d8,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:30:38 UTC +00:00]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/28
+Completed 302 Found in 8ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/rates/28" for 198.178.132.246 at 2015-03-23 13:30:38 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "28"]]
+  Rendered rates/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:30:54 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"jetblue", "transferratio"=>"1.0", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:30:54 UTC +00:00], ["transfereeprogram", "jetblue"], ["transfernotes", ""], ["transferratio", #<BigDecimal:238f7a0,'0.1E1',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:30:54 UTC +00:00]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/29
+Completed 302 Found in 8ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/rates/29" for 198.178.132.246 at 2015-03-23 13:30:54 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "29"]]
+  Rendered rates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/rates" for 198.178.132.246 at 2015-03-23 13:31:12 +0000
+Processing by RatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"virgin_america", "transferratio"=>".5", "transfernotes"=>""}, "commit"=>"Create Rate"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "rates" ("created_at", "transfereeprogram", "transfernotes", "transferratio", "transferringprogram", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 23 Mar 2015 13:31:12 UTC +00:00], ["transfereeprogram", "virgin_america"], ["transfernotes", ""], ["transferratio", #<BigDecimal:119baf8,'0.5E0',9(18)>], ["transferringprogram", "mr"], ["updated_at", Mon, 23 Mar 2015 13:31:12 UTC +00:00]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/30
+Completed 302 Found in 25ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/rates/30" for 198.178.132.246 at 2015-03-23 13:31:12 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mRate Load (0.3ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "30"]]
+  Rendered rates/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rates" for 198.178.132.246 at 2015-03-23 13:31:21 +0000
+Processing by RatesController#index as HTML
+  [1m[35mRate Load (0.5ms)[0m  SELECT "rates".* FROM "rates"
+  Rendered rates/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rates/26/edit" for 198.178.132.246 at 2015-03-23 13:31:33 +0000
+Processing by RatesController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "26"]]
+  Rendered rates/_form.html.erb (3.5ms)
+  Rendered rates/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/rates/26" for 198.178.132.246 at 2015-03-23 13:31:38 +0000
+Processing by RatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"el_al", "transferratio"=>".02", "transfernotes"=>""}, "commit"=>"Update Rate", "id"=>"26"}
+  [1m[35mRate Load (0.2ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "26"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "rates" SET "transferratio" = ?, "updated_at" = ? WHERE "rates"."id" = 26  [["transferratio", #<BigDecimal:3c38220,'0.2E-1',9(18)>], ["updated_at", Mon, 23 Mar 2015 13:31:38 UTC +00:00]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/rates/26
+Completed 302 Found in 16ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/rates/26" for 198.178.132.246 at 2015-03-23 13:31:38 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mRate Load (0.2ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "26"]]
+  Rendered rates/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rates" for 198.178.132.246 at 2015-03-23 13:31:40 +0000
+Processing by RatesController#index as HTML
+  [1m[36mRate Load (0.4ms)[0m  [1mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rates/29/edit" for 198.178.132.246 at 2015-03-23 13:31:45 +0000
+Processing by RatesController#edit as HTML
+  Parameters: {"id"=>"29"}
+  [1m[35mRate Load (0.3ms)[0m  SELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1  [["id", "29"]]
+  Rendered rates/_form.html.erb (5.6ms)
+  Rendered rates/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/rates/29" for 198.178.132.246 at 2015-03-23 13:31:50 +0000
+Processing by RatesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "rate"=>{"transferringprogram"=>"mr", "transfereeprogram"=>"jetblue", "transferratio"=>".8", "transfernotes"=>""}, "commit"=>"Update Rate", "id"=>"29"}
+  [1m[36mRate Load (0.2ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "29"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "rates" SET "transferratio" = ?, "updated_at" = ? WHERE "rates"."id" = 29[0m  [["transferratio", #<BigDecimal:27266c0,'0.8E0',9(18)>], ["updated_at", Mon, 23 Mar 2015 13:31:50 UTC +00:00]]
+  [1m[35m (4.4ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/rates/29
+Completed 302 Found in 10ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/rates/29" for 198.178.132.246 at 2015-03-23 13:31:50 +0000
+Processing by RatesController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mRate Load (0.3ms)[0m  [1mSELECT "rates".* FROM "rates" WHERE "rates"."id" = ? LIMIT 1[0m  [["id", "29"]]
+  Rendered rates/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rates" for 198.178.132.246 at 2015-03-23 13:31:51 +0000
+Processing by RatesController#index as HTML
+  [1m[35mRate Load (0.7ms)[0m  SELECT "rates".* FROM "rates"
+  Rendered rates/index.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trips" for 198.178.132.246 at 2015-03-23 13:33:06 +0000
+Processing by TripsController#index as HTML
+  [1m[36mTrip Load (1.0ms)[0m  [1mSELECT "trips".* FROM "trips"[0m
+  Rendered trips/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trips/new" for 198.178.132.246 at 2015-03-23 13:33:12 +0000
+Processing by TripsController#new as HTML
+  Rendered trips/_form.html.erb (60.5ms)
+  Rendered trips/new.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 85ms (Views: 80.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/trips" for 198.178.132.246 at 2015-03-23 13:38:30 +0000
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"140000", "lacostusd"=>"150", "accostpts"=>"", "accostusd"=>""}, "commit"=>"Create Trip"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "trips" ("aacostpts", "aacostusd", "bacostpts", "bacostusd", "costinusd", "created_at", "dlcostpts", "dlcostusd", "lacostpts", "lacostusd", "name", "sqcostpts", "sqcostusd", "uacostpts", "uacostusd", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["aacostpts", 160000], ["aacostusd", #<BigDecimal:3a9b930,'0.2E3',9(18)>], ["bacostpts", 250000], ["bacostusd", #<BigDecimal:3a9b8e0,'0.2E3',9(18)>], ["costinusd", #<BigDecimal:3a9b980,'0.24E4',9(18)>], ["created_at", Mon, 23 Mar 2015 13:38:30 UTC +00:00], ["dlcostpts", 132500], ["dlcostusd", #<BigDecimal:3a9b840,'0.15E3',9(18)>], ["lacostpts", 140000], ["lacostusd", #<BigDecimal:3a9b7a0,'0.15E3',9(18)>], ["name", "Honeymoon"], ["sqcostpts", 120000], ["sqcostusd", #<BigDecimal:3a9b7f0,'0.15E3',9(18)>], ["uacostpts", 125000], ["uacostusd", #<BigDecimal:3a9b890,'0.15E3',9(18)>], ["updated_at", Mon, 23 Mar 2015 13:38:30 UTC +00:00]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/trips/1
+Completed 302 Found in 12ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/trips/1" for 198.178.132.246 at 2015-03-23 13:38:30 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.4ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (9.7ms)
+  Rendered trips/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/results/1" for 198.178.132.246 at 2015-03-23 13:38:34 +0000
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRate Load (0.3ms)[0m  SELECT "rates".* FROM "rates"
+  [1m[36mCreditcard Load (0.2ms)[0m  [1mSELECT "creditcards".* FROM "creditcards"[0m
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `sort_by!' for nil:NilClass):
+  app/controllers/results_controller.rb:254:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.5ms)
+
+
+Started GET "/trips" for 198.178.132.246 at 2015-03-23 13:38:52 +0000
+Processing by TripsController#index as HTML
+  [1m[35mTrip Load (0.3ms)[0m  SELECT "trips".* FROM "trips"
+  Rendered trips/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips/1/edit" for 198.178.132.246 at 2015-03-23 13:40:07 +0000
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (12.3ms)
+  Rendered trips/edit.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/trips/1" for 198.178.132.246 at 2015-03-23 13:40:16 +0000
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"200000", "lacostusd"=>"150", "accostpts"=>"", "accostusd"=>""}, "commit"=>"Update Trip", "id"=>"1"}
+  [1m[35mTrip Load (0.7ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "trips" SET "lacostpts" = ?, "updated_at" = ? WHERE "trips"."id" = 1  [["lacostpts", 200000], ["updated_at", Mon, 23 Mar 2015 13:40:16 UTC +00:00]]
+  [1m[36m (13.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/trips/1
+Completed 302 Found in 38ms (ActiveRecord: 15.7ms)
+
+
+Started GET "/trips/1" for 198.178.132.246 at 2015-03-23 13:40:16 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.6ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered trips/_form.html.erb (23.0ms)
+  Rendered trips/show.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trips" for 198.178.132.246 at 2015-03-23 13:40:19 +0000
+Processing by TripsController#index as HTML
+  [1m[36mTrip Load (0.8ms)[0m  [1mSELECT "trips".* FROM "trips"[0m
+  Rendered trips/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trips/1/edit" for 198.178.132.246 at 2015-03-23 13:47:33 +0000
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.6ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered trips/_form.html.erb (22.3ms)
+  Rendered trips/edit.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 46ms (Views: 40.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/trips/1" for 198.178.132.246 at 2015-03-23 13:48:51 +0000
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"254000", "lacostusd"=>"150", "accostpts"=>"", "accostusd"=>""}, "commit"=>"Update Trip", "id"=>"1"}
+  [1m[36mTrip Load (0.3ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "trips" SET "lacostpts" = ?, "updated_at" = ? WHERE "trips"."id" = 1[0m  [["lacostpts", 254000], ["updated_at", Mon, 23 Mar 2015 13:48:51 UTC +00:00]]
+  [1m[35m (3.8ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/trips/1
+Completed 302 Found in 13ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/trips/1" for 198.178.132.246 at 2015-03-23 13:48:51 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (12.0ms)
+  Rendered trips/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips/1?utf8=%E2%9C%93&utf8=%E2%9C%93&_method=patch&authenticity_token=uEr%2Bp0U1dyJH%2F0WmpwXYQuhJkBU5d%2FRYn7khBn4yjOo%3D&trip%5Bname%5D=Honeymoon&trip%5Bcostinusd%5D=2400&trip%5Baacostpts%5D=160000&trip%5Baacostusd%5D=200&trip%5Bbacostpts%5D=250000&trip%5Bbacostusd%5D=200&trip%5Buacostpts%5D=125000&trip%5Buacostusd%5D=150&trip%5Bdlcostpts%5D=132500&trip%5Bdlcostusd%5D=150&trip%5Bascostpts%5D=&trip%5Bascostusd%5D=&trip%5Bnkcostpts%5D=&trip%5Bnkcostusd%5D=&trip%5Bsqcostpts%5D=120000&trip%5Bsqcostusd%5D=150&trip%5Blacostpts%5D=254000&trip%5Blacostusd%5D=150&trip%5Baccostpts%5D=&trip%5Baccostusd%5D=&commit=Update+Trip" for 198.178.132.246 at 2015-03-23 13:49:06 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"254000", "lacostusd"=>"150", "accostpts"=>"", "accostusd"=>""}, "commit"=>"Update Trip", "id"=>"1"}
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered trips/_form.html.erb (18.4ms)
+  Rendered trips/show.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/trips" for 198.178.132.246 at 2015-03-23 13:49:09 +0000
+Processing by TripsController#index as HTML
+  [1m[36mTrip Load (0.5ms)[0m  [1mSELECT "trips".* FROM "trips"[0m
+  Rendered trips/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 198.178.132.246 at 2015-03-23 13:49:22 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/creditcards" for 198.178.132.246 at 2015-03-23 13:49:25 +0000
+Processing by CreditcardsController#index as HTML
+  [1m[35mCreditcard Load (0.5ms)[0m  SELECT "creditcards".* FROM "creditcards"
+  Rendered creditcards/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 198.178.132.246 at 2015-03-23 14:03:58 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.246 at 2015-03-23 14:03:58 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.246 at 2015-03-23 14:03:58 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.246 at 2015-03-23 14:03:58 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.246 at 2015-03-23 14:03:58 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.246 at 2015-03-23 14:03:58 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.246 at 2015-03-23 14:03:58 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.246 at 2015-03-23 14:03:58 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.246 at 2015-03-23 14:03:58 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.246 at 2015-03-23 14:03:58 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.246 at 2015-03-23 14:03:59 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.246 at 2015-03-23 14:03:59 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.246 at 2015-03-23 14:03:59 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.246 at 2015-03-23 14:03:59 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.246 at 2015-03-23 14:03:59 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.246 at 2015-03-23 14:03:59 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.246 at 2015-03-23 14:03:59 +0000
+
+
+Started GET "/rates" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+Processing by RatesController#index as HTML
+  [1m[36mRate Load (2.6ms)[0m  [1mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 101ms (Views: 78.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.246 at 2015-03-23 14:04:01 +0000
+
+
+Started GET "/trips" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+Processing by TripsController#index as HTML
+  [1m[35mTrip Load (0.6ms)[0m  SELECT "trips".* FROM "trips"
+  Rendered trips/index.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 72ms (Views: 58.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:48 +0000
+
+
+Started GET "/trips/1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.4ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (11.3ms)
+  Rendered trips/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.246 at 2015-03-23 14:10:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAirlineCostsToTrips (20150324195144)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.4ms)[0m  [1mALTER TABLE "trips" ADD "cxcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "cxcostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "brcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "brcostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "eycostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "eycostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "afcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "afcostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "gacostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "gacostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "mhcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "mhcostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "qfcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "qfcostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "qrcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "qrcostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "tgcostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "tgcostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "vscostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "vscostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "azcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "azcostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "nhcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "nhcostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "amcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "amcostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "lycostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "lycostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "hacostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "hacostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "ibcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "ibcostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "vxcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "vxcostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "abcostpts" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD "abcostusd" decimal
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD "cacostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "cacostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "nzcostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "nzcostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "ozcostpts" integer[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "trips" ADD "ozcostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "mucostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "mucostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "czcostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "czcostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "ekcostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "ekcostusd" decimal
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "trips" ADD "g3costpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "g3costusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "hucostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "hucostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "jlcostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "jlcostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "lhcostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "lhcostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "svcostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "svcostusd" decimal
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "trips" ADD "vacostpts" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD "vacostusd" decimal
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150324195144"]]
+  [1m[35m (10.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 198.178.132.252 at 2015-03-24 19:53:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 230ms (Views: 206.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:00 +0000
+
+
+Started GET "/creditcards" for 198.178.132.252 at 2015-03-24 19:54:05 +0000
+Processing by CreditcardsController#index as HTML
+  [1m[35mCreditcard Load (1.4ms)[0m  SELECT "creditcards".* FROM "creditcards"
+  Rendered creditcards/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 68ms (Views: 51.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rates" for 198.178.132.252 at 2015-03-24 19:54:10 +0000
+Processing by RatesController#index as HTML
+  [1m[36mRate Load (1.1ms)[0m  [1mSELECT "rates".* FROM "rates"[0m
+  Rendered rates/index.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 87ms (Views: 71.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/trips" for 198.178.132.252 at 2015-03-24 19:54:18 +0000
+Processing by TripsController#index as HTML
+  [1m[35mTrip Load (0.7ms)[0m  SELECT "trips".* FROM "trips"
+  Rendered trips/index.html.erb within layouts/application (105.9ms)
+Completed 200 OK in 125ms (Views: 87.2ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/trips/1/edit" for 198.178.132.252 at 2015-03-24 19:54:21 +0000
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (1.1ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (23.3ms)
+  Rendered trips/edit.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 67ms (Views: 61.1ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/trips/1" for 198.178.132.252 at 2015-03-24 19:54:34 +0000
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"254000", "lacostusd"=>"150", "accostpts"=>"", "accostusd"=>"", "cxcostpts"=>"150000", "cxcostusd"=>""}, "commit"=>"Update Trip", "id"=>"1"}
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+Unpermitted parameters: cxcostpts, cxcostusd
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/trips/1
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/1" for 198.178.132.252 at 2015-03-24 19:54:35 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.3ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (23.5ms)
+  Rendered trips/show.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips/1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.3ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered trips/_form.html.erb (27.9ms)
+  Rendered trips/show.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 19:54:44 +0000
+
+
+Started GET "/trips/1/edit" for 198.178.132.252 at 2015-03-24 19:55:50 +0000
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.8ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (21.9ms)
+  Rendered trips/edit.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 47ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:51 +0000
+
+
+Started PATCH "/trips/1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"254000", "lacostusd"=>"150", "accostpts"=>"", "accostusd"=>"", "cxcostpts"=>"150000", "cxcostusd"=>""}, "commit"=>"Update Trip", "id"=>"1"}
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+Unpermitted parameters: cxcostpts, cxcostusd
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/trips/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (12.5ms)
+  Rendered trips/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 19:55:56 +0000
+
+
+Started GET "/trips/1" for 198.178.132.252 at 2015-03-24 20:11:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.6ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered trips/_form.html.erb (43.3ms)
+  Rendered trips/show.html.erb within layouts/application (53.4ms)
+Completed 200 OK in 195ms (Views: 112.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:45 +0000
+
+
+Started GET "/trips/1?utf8=%E2%9C%93&utf8=%E2%9C%93&_method=patch&authenticity_token=uEr%2Bp0U1dyJH%2F0WmpwXYQuhJkBU5d%2FRYn7khBn4yjOo%3D&trip%5Bname%5D=Honeymoon&trip%5Bcostinusd%5D=2400&trip%5Baacostpts%5D=160000&trip%5Baacostusd%5D=200&trip%5Bbacostpts%5D=250000&trip%5Bbacostusd%5D=200&trip%5Buacostpts%5D=125000&trip%5Buacostusd%5D=150&trip%5Bdlcostpts%5D=132500&trip%5Bdlcostusd%5D=150&trip%5Bascostpts%5D=&trip%5Bascostusd%5D=&trip%5Bnkcostpts%5D=&trip%5Bnkcostusd%5D=&trip%5Bsqcostpts%5D=120000&trip%5Bsqcostusd%5D=150&trip%5Blacostpts%5D=254000&trip%5Blacostusd%5D=150&trip%5Baccostpts%5D=10&trip%5Baccostusd%5D=&trip%5Bcxcostpts%5D=&trip%5Bcxcostusd%5D=&commit=Update+Trip" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"254000", "lacostusd"=>"150", "accostpts"=>"10", "accostusd"=>"", "cxcostpts"=>"", "cxcostusd"=>""}, "commit"=>"Update Trip", "id"=>"1"}
+  [1m[36mTrip Load (0.5ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (17.3ms)
+  Rendered trips/show.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:50 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:51 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:51 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:51 +0000
+
+
+Started GET "/trips/1/edit" for 198.178.132.252 at 2015-03-24 20:11:58 +0000
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.3ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered trips/_form.html.erb (26.0ms)
+  Rendered trips/edit.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 20:11:59 +0000
+
+
+Started PATCH "/trips/1" for 198.178.132.252 at 2015-03-24 20:12:09 +0000
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"254000", "lacostusd"=>"150", "accostpts"=>"100000", "accostusd"=>"1", "cxcostpts"=>"", "cxcostusd"=>""}, "commit"=>"Update Trip", "id"=>"1"}
+  [1m[36mTrip Load (0.5ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Unpermitted parameters: cxcostpts, cxcostusd
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (17.3ms)[0m  [1mUPDATE "trips" SET "accostpts" = ?, "accostusd" = ?, "updated_at" = ? WHERE "trips"."id" = 1[0m  [["accostpts", 100000], ["accostusd", #<BigDecimal:351cdd8,'0.1E1',9(18)>], ["updated_at", Tue, 24 Mar 2015 20:12:09 UTC +00:00]]
+  [1m[35m (14.7ms)[0m  commit transaction
+Redirected to http://dev.tralue.com:3000/trips/1
+Completed 302 Found in 73ms (ActiveRecord: 32.9ms)
+
+
+Started GET "/trips/1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.5ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (36.2ms)
+  Rendered trips/show.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 61ms (Views: 55.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:10 +0000
+
+
+Started GET "/trips/1/edit" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered trips/_form.html.erb (26.7ms)
+  Rendered trips/edit.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:18 +0000
+
+
+Started PATCH "/trips/1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"254000", "lacostusd"=>"150", "accostpts"=>"100000", "accostusd"=>"1", "cxcostpts"=>"", "cxcostusd"=>"1"}, "commit"=>"Update Trip", "id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Unpermitted parameters: cxcostpts, cxcostusd
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/trips/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered trips/_form.html.erb (10.8ms)
+  Rendered trips/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:21 +0000
+
+
+Started GET "/trips/1?utf8=%E2%9C%93&utf8=%E2%9C%93&_method=patch&authenticity_token=uEr%2Bp0U1dyJH%2F0WmpwXYQuhJkBU5d%2FRYn7khBn4yjOo%3D&trip%5Bname%5D=Honeymoon&trip%5Bcostinusd%5D=2400&trip%5Baacostpts%5D=160000&trip%5Baacostusd%5D=200&trip%5Bbacostpts%5D=250000&trip%5Bbacostusd%5D=200&trip%5Buacostpts%5D=125000&trip%5Buacostusd%5D=150&trip%5Bdlcostpts%5D=132500&trip%5Bdlcostusd%5D=150&trip%5Bascostpts%5D=&trip%5Bascostusd%5D=&trip%5Bnkcostpts%5D=&trip%5Bnkcostusd%5D=&trip%5Bsqcostpts%5D=120000&trip%5Bsqcostusd%5D=150&trip%5Blacostpts%5D=254000&trip%5Blacostusd%5D=150&trip%5Baccostpts%5D=100000&trip%5Baccostusd%5D=1&trip%5Bcxcostpts%5D=1&trip%5Bcxcostusd%5D=1&commit=Update+Trip" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"254000", "lacostusd"=>"150", "accostpts"=>"100000", "accostusd"=>"1", "cxcostpts"=>"1", "cxcostusd"=>"1"}, "commit"=>"Update Trip", "id"=>"1"}
+  [1m[36mTrip Load (0.4ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered trips/_form.html.erb (32.0ms)
+  Rendered trips/show.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:39 +0000
+
+
+Started GET "/trips/1/edit" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.4ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered trips/_form.html.erb (25.0ms)
+  Rendered trips/edit.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:45 +0000
+
+
+Started PATCH "/trips/1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uEr+p0U1dyJH/0WmpwXYQuhJkBU5d/RYn7khBn4yjOo=", "trip"=>{"name"=>"Honeymoon", "costinusd"=>"2400", "aacostpts"=>"160000", "aacostusd"=>"200", "bacostpts"=>"250000", "bacostusd"=>"200", "uacostpts"=>"125000", "uacostusd"=>"150", "dlcostpts"=>"132500", "dlcostusd"=>"150", "ascostpts"=>"", "ascostusd"=>"", "nkcostpts"=>"", "nkcostusd"=>"", "sqcostpts"=>"120000", "sqcostusd"=>"150", "lacostpts"=>"254000", "lacostusd"=>"150", "accostpts"=>"100000", "accostusd"=>"1", "cxcostpts"=>"2", "cxcostusd"=>""}, "commit"=>"Update Trip", "id"=>"1"}
+  [1m[36mTrip Load (0.5ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Unpermitted parameters: cxcostpts, cxcostusd
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://dev.tralue.com:3000/trips/1
+Completed 302 Found in 14ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/trips/1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.4ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered trips/_form.html.erb (35.2ms)
+  Rendered trips/show.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-24 20:12:52 +0000
+
+
+Started GET "/results/1" for 198.178.132.252 at 2015-03-24 20:13:00 +0000
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mRate Load (0.7ms)[0m  [1mSELECT "rates".* FROM "rates"[0m
+  [1m[35mCreditcard Load (0.4ms)[0m  SELECT "creditcards".* FROM "creditcards"
+Completed 500 Internal Server Error in 32ms
+
+NoMethodError (undefined method `sort_by!' for nil:NilClass):
+  app/controllers/results_controller.rb:254:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+
+
+Started GET "/results/1" for 198.178.132.252 at 2015-03-30 21:06:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.5ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 82ms
+
+NoMethodError (undefined method `cxcostpts=' for #<Result:0x00000002d37c30>):
+  app/controllers/results_controller.rb:48:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.7ms)
+
+
+Started GET "/results/1" for 198.178.132.252 at 2015-03-30 21:15:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.5ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRate Load (0.5ms)[0m  SELECT "rates".* FROM "rates"
+  [1m[36mCreditcard Load (0.3ms)[0m  [1mSELECT "creditcards".* FROM "creditcards"[0m
+Completed 500 Internal Server Error in 93ms
+
+NoMethodError (undefined method `sort_by!' for nil:NilClass):
+  app/controllers/results_controller.rb:825:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/results/1" for 198.178.132.252 at 2015-03-30 21:16:54 +0000
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRate Load (0.3ms)[0m  SELECT "rates".* FROM "rates"
+  [1m[36mCreditcard Load (0.2ms)[0m  [1mSELECT "creditcards".* FROM "creditcards"[0m
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `sort_by!' for nil:NilClass):
+  app/controllers/results_controller.rb:825:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+
+
+Started GET "/results/1" for 198.178.132.252 at 2015-03-30 21:18:57 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.5ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRate Load (0.4ms)[0m  SELECT "rates".* FROM "rates"
+  [1m[36mCreditcard Load (0.3ms)[0m  [1mSELECT "creditcards".* FROM "creditcards"[0m
+Completed 500 Internal Server Error in 91ms
+
+NoMethodError (undefined method `sort_by!' for nil:NilClass):
+  app/controllers/results_controller.rb:826:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+
+
+Started GET "/results/1" for 198.178.132.252 at 2015-03-30 21:21:27 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.5ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRate Load (0.4ms)[0m  SELECT "rates".* FROM "rates"
+  [1m[36mCreditcard Load (0.2ms)[0m  [1mSELECT "creditcards".* FROM "creditcards"[0m
+Completed 500 Internal Server Error in 91ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/results_controller.rb:829:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.9ms)
+
+
+Started GET "/results/1" for 198.178.132.252 at 2015-03-30 21:22:25 +0000
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.2ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRate Load (0.3ms)[0m  SELECT "rates".* FROM "rates"
+  [1m[36mCreditcard Load (0.2ms)[0m  [1mSELECT "creditcards".* FROM "creditcards"[0m
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/results_controller.rb:829:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/results/1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTrip Load (0.4ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRate Load (0.5ms)[0m  SELECT "rates".* FROM "rates"
+  [1m[36mCreditcard Load (0.2ms)[0m  [1mSELECT "creditcards".* FROM "creditcards"[0m
+  Rendered results/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 177ms (Views: 83.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-30 21:22:53 +0000
+
+
+Started GET "/trips" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+Processing by TripsController#index as HTML
+  [1m[35mTrip Load (0.5ms)[0m  SELECT "trips".* FROM "trips"
+  Rendered trips/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:00 +0000
+
+
+Started GET "/results/1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.2ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mRate Load (0.4ms)[0m  [1mSELECT "rates".* FROM "rates"[0m
+  [1m[35mCreditcard Load (0.2ms)[0m  SELECT "creditcards".* FROM "creditcards"
+  Rendered results/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:02 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:03 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:03 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:03 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:03 +0000
+
+
+Started GET "/" for 198.178.132.252 at 2015-03-30 21:23:07 +0000
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:08 +0000
+
+
+Started GET "/creditcards" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+Processing by CreditcardsController#index as HTML
+  [1m[36mCreditcard Load (1.1ms)[0m  [1mSELECT "creditcards".* FROM "creditcards"[0m
+  Rendered creditcards/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-30 21:23:09 +0000
+
+
+Started GET "/" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 67ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:13 +0000
+
+
+Started GET "/trips" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+Processing by TripsController#index as HTML
+  [1m[35mTrip Load (0.4ms)[0m  SELECT "trips".* FROM "trips"
+  Rendered trips/index.html.erb within layouts/application (84.9ms)
+Completed 200 OK in 99ms (Views: 92.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:15 +0000
+
+
+Started GET "/results/1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrip Load (0.5ms)[0m  [1mSELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mRate Load (0.5ms)[0m  [1mSELECT "rates".* FROM "rates"[0m
+  [1m[35mCreditcard Load (0.3ms)[0m  SELECT "creditcards".* FROM "creditcards"
+  Rendered results/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 33ms (Views: 9.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/rates.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/home.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/trips.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/creditcards.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/results.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/application.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/welcome.css?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/creditcards.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/home.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/rates.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/results.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/trips.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000
+
+
+Started GET "/assets/welcome.js?body=1" for 198.178.132.252 at 2015-03-30 21:40:17 +0000

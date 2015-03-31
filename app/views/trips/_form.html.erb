@@ -1,0 +1,460 @@
+<%= form_for @trip do |t| %>
+  <% if @trip.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@trip.errors.count, "error") %> prohibited this credit card from being saved:
+      </h2>
+      <ul>
+        <% @trip.errors.full_messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <p>
+  <%= t.label :name %></br>
+  <%= t.text_field :name %>
+  </p>
+  
+  <p>
+  <%= t.label :'Cost in USD' %></br>
+  <%= t.number_field :costinusd %>
+  </p>
+  
+  <!-- AA -->
+  <p>
+  <%= t.label :'American points cost' %></br>
+  <%= t.number_field :aacostpts %>
+  </p>
+  
+  <p>
+  <%= t.label :'American USD copay' %></br>
+  <%= t.number_field :aacostusd %>
+  </p>
+  
+  <!-- BA -->
+  <p>
+  <%= t.label :'BA Avios cost' %></br>
+  <%= t.number_field :bacostpts %>
+  </p>
+  
+  <p>
+  <%= t.label :'BA USD copay' %></br>
+  <%= t.number_field :bacostusd %>
+  </p>
+  
+  <!-- UA -->
+  <p>
+  <%= t.label :'United points cost' %></br>
+  <%= t.number_field :uacostpts %>
+  </p>
+  
+  <p>
+  <%= t.label :'United USD copay' %></br>
+  <%= t.number_field :uacostusd %>
+  </p>
+  
+  <!-- DL -->
+  <p>
+  <%= t.label :'Delta points cost' %></br>
+  <%= t.number_field :dlcostpts %>
+  </p>
+  
+  <p>
+  <%= t.label :'Delta USD copay' %></br>
+  <%= t.number_field :dlcostusd %>
+  </p>
+  
+  <!-- AS -->
+  <p>
+  <%= t.label :'Alaska points cost' %></br>
+  <%= t.number_field :ascostpts %>
+  </p>
+  
+  <p>
+  <%= t.label :'Alaska USD copay' %></br>
+  <%= t.number_field :ascostusd %>
+  </p>
+  
+  <!-- NK -->
+  <p>
+  <%= t.label :'Spirit points cost' %></br>
+  <%= t.number_field :nkcostpts %>
+  </p>
+  
+  <p>
+  <%= t.label :'Spirit USD copay' %></br>
+  <%= t.number_field :nkcostusd %>
+  </p>
+  
+  <!-- SQ -->
+  <p>
+  <%= t.label :'Singapore points cost' %></br>
+  <%= t.number_field :sqcostpts %>
+  </p>
+  
+  <p>
+  <%= t.label :'Singapore USD copay' %></br>
+  <%= t.number_field :sqcostusd %>
+  </p>
+  
+  <!-- LA -->
+  <p>
+  <%= t.label :'LAN points cost' %></br>
+  <%= t.number_field :lacostpts %>
+  </p>
+  
+  <p>
+  <%= t.label :'LAN USD copay' %></br>
+  <%= t.number_field :lacostusd %>
+  </p>
+  
+  <!-- AC -->
+  <p>
+  <%= t.label :'Aeroplan points cost' %></br>
+  <%= t.number_field :accostpts %>
+  </p>
+  
+  <p>
+  <%= t.label :'Aeroplan USD copay' %></br>
+  <%= t.number_field :accostusd %>
+  </p>
+  
+  <!-- CX -->
+  <p>
+  <%= t.label :'Cathay Pacific points cost' %></br>
+  <%= t.number_field :cxcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Cathay Pacific USD copay' %></br>
+  <%= t.number_field :cxcostusd %>
+  </p>
+  
+  <!-- BR -->
+  <p>
+  <%= t.label :'EVA points cost' %></br>
+  <%= t.number_field :brcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'EVA USD copay' %></br>
+  <%= t.number_field :brcostusd %>
+  </p>
+  
+  <!-- EY -->
+  <p>
+  <%= t.label :'Etihad points cost' %></br>
+  <%= t.number_field :eycostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Etihad USD copay' %></br>
+  <%= t.number_field :eycostusd %>
+  </p>
+  
+  <!-- AF -->
+  <p>
+  <%= t.label :'Flying Blue points cost' %></br>
+  <%= t.number_field :afcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Flying Blue USD copay' %></br>
+  <%= t.number_field :afcostusd %>
+  </p>
+  
+  <!-- GA -->
+  <p>
+  <%= t.label :'Garuda Indonesia points cost' %></br>
+  <%= t.number_field :gacostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Garuda Indonesia USD copay' %></br>
+  <%= t.number_field :gacostusd %>
+  </p>
+  
+  <!-- MH -->
+  <p>
+  <%= t.label :'Malaysia Air points cost' %></br>
+  <%= t.number_field :mhcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Malaysia Air USD copay' %></br>
+  <%= t.number_field :mhcostusd %>
+  </p>
+  
+  <!-- QF -->
+  <p>
+  <%= t.label :'Qantas points cost' %></br>
+  <%= t.number_field :qfcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Qantas USD copay' %></br>
+  <%= t.number_field :qfcostusd %>
+  </p>
+  
+  <!-- QR -->
+  <p>
+  <%= t.label :'Qatar points cost' %></br>
+  <%= t.number_field :qrcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Qatar USD copay' %></br>
+  <%= t.number_field :qrcostusd %>
+  </p>
+  
+  <!-- TG -->
+  <p>
+  <%= t.label :'Thai Airways points cost' %></br>
+  <%= t.number_field :tgcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Thai USD copay' %></br>
+  <%= t.number_field :tgcostusd %>
+  </p>
+  
+  <!-- VS -->
+  <p>
+  <%= t.label :'Virgin Atlantic points cost' %></br>
+  <%= t.number_field :vscostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Virgin Atlantic USD copay' %></br>
+  <%= t.number_field :vscostusd %>
+  </p>
+  
+  <!-- AZ -->
+  <p>
+  <%= t.label :'Alitalia points cost' %></br>
+  <%= t.number_field :azcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Alitalia USD copay' %></br>
+  <%= t.number_field :azcostusd %>
+  </p>
+  
+  <!-- NH -->
+  <p>
+  <%= t.label :'ANA points cost' %></br>
+  <%= t.number_field :nhcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'ANA USD copay' %></br>
+  <%= t.number_field :nhcostusd %>
+  </p>
+  
+  <!-- AM -->
+  <p>
+  <%= t.label :'AeroMexico points cost' %></br>
+  <%= t.number_field :amcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'AeroMexico USD copay' %></br>
+  <%= t.number_field :amcostusd %>
+  </p>
+  
+  <!-- LY -->
+  <p>
+  <%= t.label :'El Al points cost' %></br>
+  <%= t.number_field :lycostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'El Al USD copay' %></br>
+  <%= t.number_field :lycostusd %>
+  </p>
+  
+  <!-- HA -->
+  <p>
+  <%= t.label :'Hawaiian points cost' %></br>
+  <%= t.number_field :hacostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Hawaiian USD copay' %></br>
+  <%= t.number_field :hacostusd %>
+  </p>
+  
+  <!-- IB -->
+  <p>
+  <%= t.label :'Iberia points cost' %></br>
+  <%= t.number_field :ibcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Iberia USD copay' %></br>
+  <%= t.number_field :ibcostusd %>
+  </p>
+  
+  <!-- VX -->
+  <p>
+  <%= t.label :'Virgin America points cost' %></br>
+  <%= t.number_field :vxcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Virgin America USD copay' %></br>
+  <%= t.number_field :vxcostusd %>
+  </p>
+  
+  <!-- AB -->
+  <p>
+  <%= t.label :'Air Berlin points cost' %></br>
+  <%= t.number_field :abcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Air Berline USD copay' %></br>
+  <%= t.number_field :abcostusd %>
+  </p>
+  
+  <!-- CA -->
+  <p>
+  <%= t.label :'Air China points cost' %></br>
+  <%= t.number_field :cacostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Air China USD copay' %></br>
+  <%= t.number_field :cacostusd %>
+  </p>
+  
+  <!-- NZ -->
+  <p>
+  <%= t.label :'Air New Zealand points cost' %></br>
+  <%= t.number_field :nzcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Air New Zealand USD copay' %></br>
+  <%= t.number_field :nzcostusd %>
+  </p>
+  
+  <!-- OZ -->
+  <p>
+  <%= t.label :'Asiana points cost' %></br>
+  <%= t.number_field :ozcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Asiana USD copay' %></br>
+  <%= t.number_field :ozcostusd %>
+  </p>
+  
+  <!-- MU -->
+  <p>
+  <%= t.label :'China Eastern points cost' %></br>
+  <%= t.number_field :mucostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'China Eastern USD copay' %></br>
+  <%= t.number_field :mucostusd %>
+  </p>
+  
+  <!-- CZ -->
+  <p>
+  <%= t.label :'China Southern points cost' %></br>
+  <%= t.number_field :czcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'China Southern USD copay' %></br>
+  <%= t.number_field :czcostusd %>
+  </p>
+  
+  <!-- EK -->
+  <p>
+  <%= t.label :'Emirates points cost' %></br>
+  <%= t.number_field :ekcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Emirates USD copay' %></br>
+  <%= t.number_field :ekcostusd %>
+  </p>
+  
+  <!-- G3 -->
+  <p>
+  <%= t.label :'Gol points cost' %></br>
+  <%= t.number_field :g3costpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Gol USD copay' %></br>
+  <%= t.number_field :g3costusd %>
+  </p>
+  
+  <!-- HU -->
+  <p>
+  <%= t.label :'Hainan points cost' %></br>
+  <%= t.number_field :hucostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Hainan USD copay' %></br>
+  <%= t.number_field :hucostusd %>
+  </p>
+  
+  <!-- JL -->
+  <p>
+  <%= t.label :'JAL points cost' %></br>
+  <%= t.number_field :jlcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'JAL USD copay' %></br>
+  <%= t.number_field :jlcostusd %>
+  </p>
+  
+  <!-- LH -->
+  <p>
+  <%= t.label :'Lufthansa points cost' %></br>
+  <%= t.number_field :lhcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Lufthansa USD copay' %></br>
+  <%= t.number_field :lhcostusd %>
+  </p>
+  
+  <!-- SV -->
+  <p>
+  <%= t.label :'Saudia points cost' %></br>
+  <%= t.number_field :svcostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Saudia USD copay' %></br>
+  <%= t.number_field :svcostusd %>
+  </p>
+  
+  <!-- VA -->
+  <p>
+  <%= t.label :'Virgin Australia points cost' %></br>
+  <%= t.number_field :vacostpts %>
+  </p>
+
+  <p>
+  <%= t.label :'Virgin Australia USD copay' %></br>
+  <%= t.number_field :vacostusd %>
+  </p>
+
+  <p>
+  <%= t.submit %>
+  </p>
+  
+<% end %>
