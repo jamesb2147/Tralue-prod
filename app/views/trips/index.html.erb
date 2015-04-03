@@ -1,6 +1,7 @@
-<h1>Listing trips</h1>
+<h1>Tralue - Listing trips</h1>
 
-<table>
+<div class="table-responsive">
+<table class="table table-hover">
     <tr>
         <th>Name</th>
         <th>Cost in USD</th>
@@ -18,39 +19,34 @@
         <th>NK USD</th>
         <th>SQ pts</th>
         <th>SQ USD</th>
-        <th>LA pts</th>
-        <th>LA USD</th>
-        <th>AC pts</th>
-        <th>AC USD</th>
     </tr>
     
     <% @trips.each do |t| %>
         <tr>
             <td><%= t.name %></td>
-            <td><%= t.costinusd %></td>
+            <td>$<%= t.costinusd %></td>
             <td><%= t.aacostpts %></td>
-            <td><%= t.aacostusd %></td>
+            <td>$<%= t.aacostusd %></td>
             <td><%= t.bacostpts %></td>
-            <td><%= t.bacostusd %></td>
+            <td>$<%= t.bacostusd %></td>
             <td><%= t.uacostpts %></td>
-            <td><%= t.uacostusd %></td>
+            <td>$<%= t.uacostusd %></td>
             <td><%= t.dlcostpts %></td>
-            <td><%= t.dlcostusd %></td>
+            <td>$<%= t.dlcostusd %></td>
             <td><%= t.ascostpts %></td>
-            <td><%= t.ascostusd %></td>
+            <td>$<%= t.ascostusd %></td>
             <td><%= t.nkcostpts %></td>
-            <td><%= t.nkcostusd %></td>
+            <td>$<%= t.nkcostusd %></td>
             <td><%= t.sqcostpts %></td>
-            <td><%= t.sqcostusd %></td>
-            <td><%= t.lacostpts %></td>
-            <td><%= t.lacostusd %></td>
-            <td><%= t.accostpts %></td>
-            <td><%= t.accostusd %></td>
-            <td><%= link_to 'Show', trip_path(t) %></td>
-            <td><%= link_to 'Edit', edit_trip_path(t) %></td>
-            <td><%= link_to 'Destroy', trip_path(t), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <td><%= link_to 'View recommendations', result_path(t) %></td>
+            <td>$<%= t.sqcostusd %></td>
+
+            <td><%= link_to 'Show', trip_path(t), class: 'btn btn-primary' %></td>
+            <td><%= link_to 'Edit', edit_trip_path(t), class: 'btn btn-primary' %></td>
+            <td><%= link_to 'Destroy', trip_path(t), method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'View recommendations', result_path(t), class: 'btn btn-success' %></td>
         </tr>
     <% end %>
 </table>
-<%= link_to 'New trip', new_trip_path %>
+</div>
+<%= link_to 'Home', root_path, class: 'btn btn-primary' %>
+<%= link_to 'New trip', new_trip_path, class: 'btn btn-primary' %>

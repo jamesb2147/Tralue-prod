@@ -1,4 +1,4 @@
-<h1>Tralue</h1>
+<h1>Tralue - Show credit card</h1>
 
 <p>
   <strong>Title:</strong>
@@ -10,5 +10,25 @@
   <%= @creditcard.issuer %>
 </p>
 
-<%= link_to 'Back', creditcards_path %>
-<%= link_to 'Edit', edit_creditcard_path(@creditcard) %>
+<%= form_for :creditcard, url: creditcard_path(@creditcard) do |cc| %>
+  <% if @creditcard.errors.any? %>
+    <div id="error explanation">
+      <h2>
+        <%= pluralize(@creditcard.errors.count, "error") %> prevented this card from being updated:
+      </h2>
+      <ul>
+        <% @creditcard.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+
+  <% end %>
+
+<%= render 'form' %>
+
+<% end %>
+
+<%= link_to 'Home', root_path, class: 'btn btn-primary' %>
+<%= link_to 'Back', creditcards_path, class: 'btn btn-primary' %>
+<%= link_to 'Edit', edit_creditcard_path(@creditcard), class: 'btn btn-primary' %>

@@ -1,6 +1,6 @@
 <h1>Tralue - Credit card recommendations for <%= @result.name %></h1>
 
-<table>
+<table class="table table-hover">
     <tr>
         <th>Name</th>
         <th>By</th>
@@ -35,7 +35,9 @@
             <td><%= a[0].notes %></td>
             <td><%= a[0].annual_fee %></td>
             <td><%= a[0].fee_waived_first_year.to_s %></td>
-            <td><%= link_to 'Application', a[0].url %></td>
+            <td><%= link_to a[0].url, class: 'btn btn-success' do %>
+                Application
+            <% end %></td>
             <td><%= sprintf("%.0f", (@result.costinusd - ( if a[0].fee_waived_first_year then 0 else a[0].annual_fee end ) - a[5]) * a[3] / 100) %></td>
             <td><%= sprintf("%.1f", (@result.costinusd - ( if a[0].fee_waived_first_year then 0 else a[0].annual_fee end ) - a[5]) * a[3] / 100 / (a[0].first_purchase_bonus + a[0].spend_bonus + a[0].spend_requirement) * a[1].transferratio * 100) %></td>
         </tr>
@@ -43,5 +45,5 @@
     
 </table>
 
-<%= link_to 'Back', trips_path %>
-<%= link_to 'Home', root_path %>
+<%= link_to 'Back', trips_path, class: 'btn btn-primary' %>
+<%= link_to 'Home', root_path, class: 'btn btn-primary' %>
